@@ -1,0 +1,14 @@
+{
+  "name": "asseed-lp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "puppeteer": "^24.38.0",
+    "vite": "^5.4.0"
+  }
+}
