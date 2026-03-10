@@ -339,39 +339,40 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
    STORIES
    ================================================================ */
 .stories {
-  background: var(--white);
-  padding-top: 80px; /* 余白を少し広げました */
-  padding-bottom: 40px;
+  background: #f7f6f4;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .stories__title {
   font-size: clamp(22px, 3vw, 34px);
   text-align: center;
   color: var(--primary);
-  margin-bottom: 48px; /* タイトル下の余白もそれに合わせて少し広げました */
+  margin-bottom: 64px;
   line-height: 1.7;
   font-weight: 700;
   letter-spacing: .1em;
 }
 .story {
-  background: var(--bg-warm);
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-  padding: 40px;
-  margin-bottom: 24px;
-  transition: box-shadow .3s var(--ease);
-}
-.story:nth-of-type(even) {
   background: var(--white);
+  border-radius: var(--radius);
+  border: none;
+  padding: 48px 56px;
+  margin-bottom: 32px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.03);
+  transition: box-shadow .4s var(--ease), transform .4s var(--ease);
 }
-.story:hover { box-shadow: var(--shadow-md); }
+.story:hover { 
+  box-shadow: 0 16px 48px rgba(0,0,0,.06); 
+  transform: translateY(-2px);
+}
 .story:last-child { margin-bottom: 0; }
 
 .story--featured {
-  background: var(--bg-warm);
+  background: var(--white);
   color: var(--text);
-  border: 1px solid var(--accent-light);
-  padding: 48px;
-  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(220,174,85,.3);
+  padding: 56px 64px;
+  box-shadow: 0 12px 40px rgba(220,174,85,.08);
 }
 .story--featured .story__headline { color: var(--primary); font-size: clamp(20px, 2.5vw, 28px); }
 .story--featured .story__text strong { color: var(--primary); }
@@ -400,14 +401,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 }
 
 .story__body { display: flex; gap: 32px; align-items: flex-start; }
-.story__photo { flex-shrink: 0; text-align: center; }
-.story__photo img {
-  width: 120px; height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--bg-alt);
-}
-.story--featured .story__photo img { border-color: rgba(196,149,106,.3); width: 140px; height: 140px; }
+.story__photo { display: none; }
 .story__credit { font-size: 12px; color: var(--text-muted); margin-top: 10px; line-height: 1.6; }
 
 .story__text p { font-size: 15px; color: var(--text-mid); line-height: 2.1; margin-bottom: 12px; }
@@ -418,8 +412,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   font-size: 17px; font-weight: 500;
   color: var(--primary);
   border-left: 3px solid var(--accent);
-  padding: 8px 0 8px 20px;
-  margin: 20px 0; line-height: 1.9;
+  padding: 8px 0 8px 24px;
+  margin: 24px 0; line-height: 1.9;
 }
 .story__therapist { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
 
@@ -1107,10 +1101,10 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   .hero__stat-value { font-size: 30px; }
   .hero__headline { font-size: 28px; }
 
-  .story { padding: 28px; }
-  .story--featured { padding: 32px; }
-  .story__body { flex-direction: column; }
-  .story__photo { align-self: center; }
+  .story { padding: 32px 24px; }
+  .story--featured { padding: 40px 24px; }
+  .story__body { flex-direction: column; gap: 24px; }
+  .story__text blockquote { margin: 20px 0; padding: 8px 0 8px 16px; font-size: 16px; }
 
   .why__columns { grid-template-columns: 1fr; gap: 16px; }
   .why__multiply-mark { padding: 8px 0; font-size: 32px; }
@@ -1148,8 +1142,8 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   .hero__stat-card { padding: 12px 14px; min-width: 90px; }
   .hero__stat-value { font-size: 26px; }
   .hero__stats { gap: 8px; }
-  .story { padding: 20px; }
-  .story--featured { padding: 24px; }
+  .story { padding: 24px 20px; }
+  .story--featured { padding: 32px 20px; }
   .story__photo img { width: 100px; height: 100px; }
   .header__cta { padding: 8px 16px; font-size: 12px; }
 }
