@@ -647,6 +647,14 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
    THERAPISTS
    ================================================================ */
 .therapists { background: var(--bg-alt); }
+.therapists__title {
+  margin-bottom: 48px; /* 約1行分のスペース */
+  line-height: 1.6;
+}
+.therapists__lead {
+  line-height: 2.4; /* 全体の行間を広げて余白を持たせる */
+  margin-bottom: 72px;
+}
 
 .therapist {
   display: flex; gap: 28px;
