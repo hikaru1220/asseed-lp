@@ -1213,10 +1213,13 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   z-index: 100;
   transform: translateY(100%);
   transition: transform .4s var(--ease);
+  text-align: center;
 }
 .fixed-cta.visible { transform: translateY(0); }
 .fixed-cta__inner {
-  max-width: 480px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
   margin: 0 auto;
   text-align: center;
 }
@@ -1232,9 +1235,9 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   margin-top: 6px;
 }
 .fixed-cta .btn {
-  width: 95%; /* 横幅をさらに広げる */
-  max-width: 440px; /* 直上のテキストよりさらに長めの余裕を持たせたサイズ */
-  padding: 14px 24px;
+  width: 100%; /* 親要素(上のテキストの幅)に自動でピッタリ揃う */
+  max-width: none;
+  padding: 14px 0;
   font-size: 15px;
   font-weight: 700;
   border-radius: 40px;
