@@ -1141,8 +1141,8 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   .section { padding: 72px 0; }
 
   .hero { padding: 100px 20px 56px; min-height: auto; }
-  .hero__stats { gap: 10px; }
-  .hero__stat-card { padding: 14px 18px; min-width: 100px; flex: 1; }
+  .hero__stats { gap: 10px; max-width: 320px; margin: 40px auto 32px; }
+  .hero__stat-card { padding: 14px 18px; min-width: 0; flex: 1; }
   .hero__stat-card--main {
     flex-basis: 100%;
     padding: 24px;
