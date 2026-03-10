@@ -269,14 +269,21 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   flex-wrap: wrap;
 }
 .hero__stat-card {
-  background: rgba(14, 20, 34, 0.6);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
   border-radius: var(--radius-sm);
-  padding: 20px 28px;
+  padding: 24px 32px;
   text-align: center;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
-  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
   min-width: 140px;
+}
+.hero__stat-card--main {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.hero__stat-card--main .hero__stat-value {
+  color: #fcebbb;
 }
 .hero__stat-value {
   display: block;
