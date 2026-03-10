@@ -1233,7 +1233,7 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
 }
 .fixed-cta .btn {
   width: 95%; /* 横幅をさらに広げる */
-  max-width: 380px; /* 直上のテキストより少し長めの余裕を持たせたサイズ */
+  max-width: 440px; /* 直上のテキストよりさらに長めの余裕を持たせたサイズ */
   padding: 14px 24px;
   font-size: 15px;
   font-weight: 700;
