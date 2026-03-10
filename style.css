@@ -1271,8 +1271,8 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   .section { padding: 72px 0; }
 
   .hero { padding: 100px 20px 56px; min-height: auto; }
-  .hero__stats { gap: 10px; display: inline-flex; flex-wrap: wrap; justify-content: center; margin: 40px auto 32px; max-width: 280px; }
-  .hero__stat-card { padding: 12px 16px; flex: 1; min-width: 0; background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); }
+  .hero__stats { gap: 16px 10px; display: inline-flex; flex-wrap: wrap; justify-content: center; margin: 40px auto 32px; max-width: 290px; }
+  .hero__stat-card { padding: 12px 8px; flex: 1; min-width: 0; background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); }
   .hero__stat-card--main {
     flex-basis: 100%;
     padding: 16px 20px;
@@ -1281,12 +1281,13 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
     box-shadow: 0 4px 24px rgba(0,0,0,0.15);
   }
   .hero__stat-card--main .hero__stat-value {
-    font-size: 34px;
+    font-size: 44px; /* ブロックの大きさに合わせて拡大 */
     color: #fcebbb;
     text-shadow: 0 2px 8px rgba(0,0,0,0.5);
   }
-  .hero__stat-value { font-size: 24px; text-shadow: 0 2px 6px rgba(0,0,0,0.5); }
-  .hero__stat-label { font-size: 13px; text-shadow: 0 1px 4px rgba(0,0,0,0.4); }
+  .hero__stat-value { font-size: 30px; text-shadow: 0 2px 6px rgba(0,0,0,0.5); }
+  .hero__stat-value small { font-size: 16px; margin-left: 2px; } /* ラベル(13px)より大きく設定 */
+  .hero__stat-label { font-size: 13px; text-shadow: 0 1px 4px rgba(0,0,0,0.4); margin-top: 4px; }
   .hero__headline { 
     font-size: 26px; 
     white-space: normal; 
