@@ -591,9 +591,10 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 }
 .why__result-highlight {
   display: block;
-  font-size: clamp(24px, 4vw, 30px);
+  font-size: clamp(28px, 4.5vw, 36px);
   font-weight: 800;
-  margin-top: 32px;
+  margin-top: 56px;
+  margin-bottom: 24px;
   background: linear-gradient(
     135deg,
     #cfa153 0%,
