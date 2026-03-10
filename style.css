@@ -1232,10 +1232,10 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   margin-top: 6px;
 }
 .fixed-cta .btn {
-  width: 90%; /* 上下のテキストに合わせた幅に調整 */
-  max-width: 320px; /* 広がりすぎないよう最大幅を設定 */
-  padding: 12px 24px;
-  font-size: 14px;
+  width: 95%; /* 横幅をさらに広げる */
+  max-width: 380px; /* 直上のテキストより少し長めの余裕を持たせたサイズ */
+  padding: 14px 24px;
+  font-size: 15px;
   font-weight: 700;
   border-radius: 40px;
   display: inline-flex;
