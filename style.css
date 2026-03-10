@@ -540,10 +540,21 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   background: var(--bg-warm);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 48px 40px;
+  padding: 40px;
   text-align: left;
 }
-.why__col h3 { font-size: 20px; color: var(--primary); margin-bottom: 24px; }
+.why__col h3 { 
+  font-size: 20px; 
+  color: #a87c33; /* ゴールド系の強調カラー */
+  background: #fdfaf5; /* ほんの少し温かみのある白背景 */
+  border: 1px solid rgba(220,174,85, 0.3); /* 薄いゴールドの枠線 */
+  border-radius: var(--radius-sm);
+  padding: 16px 24px;
+  margin: -16px -16px 32px -16px; /* 親要素のpaddingを相殺して枠いっぱいに広げる */
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
 .why__col > p { font-size: 15px; color: var(--text-mid); margin-bottom: 24px; line-height: 2.1; }
 .why__col > p:last-child { margin-bottom: 0; }
 .why__col strong { color: var(--primary); font-weight: 600; }
