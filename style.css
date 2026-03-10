@@ -336,92 +336,94 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 
 
 /* ================================================================
-   STORIES
+   STORIES (CASE CARDS) — 悩みと変化
    ================================================================ */
 .stories {
-  background: var(--white);
-  padding-top: 80px; /* 余白を少し広げました */
-  padding-bottom: 40px;
+  background: var(--bg-alt); /* 上品なオフホワイト背景 */
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .stories__title {
-  font-size: clamp(22px, 3vw, 34px);
+  font-size: clamp(22px, 3.5vw, 36px);
   text-align: center;
   color: var(--primary);
-  margin-bottom: 48px; /* タイトル下の余白もそれに合わせて少し広げました */
-  line-height: 1.7;
-  font-weight: 700;
-  letter-spacing: .1em;
-}
-.story {
-  background: var(--bg-warm);
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-  padding: 40px;
-  margin-bottom: 24px;
-  transition: box-shadow .3s var(--ease);
-}
-.story:nth-of-type(even) {
-  background: var(--white);
-}
-.story:hover { box-shadow: var(--shadow-md); }
-.story:last-child { margin-bottom: 0; }
-
-.story--featured {
-  background: var(--bg-warm);
-  color: var(--text);
-  border: 1px solid var(--accent-light);
-  padding: 48px;
-  box-shadow: var(--shadow-sm);
-}
-.story--featured .story__headline { color: var(--primary); font-size: clamp(20px, 2.5vw, 28px); }
-.story--featured .story__text strong { color: var(--primary); }
-.story--featured blockquote { border-left-color: var(--accent); color: var(--primary); }
-.story--featured .story__credit { color: var(--text-muted); }
-.story--featured .story__therapist { color: var(--primary); }
-
-.story__header { margin-bottom: 28px; }
-.story__category {
-  display: inline-block;
-  font-family: var(--font-display);
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: .1em;
-  color: var(--primary);
-  background: #fdf5d3;
-  border: 1px solid #f1e4b3;
-  border-radius: 40px;
-  padding: 6px 20px;
-  margin-bottom: 16px;
-}
-.story__headline {
-  font-size: clamp(18px, 2.2vw, 24px);
-  color: var(--primary);
+  margin-bottom: 64px;
   line-height: 1.6;
 }
 
-.story__body { display: flex; gap: 32px; align-items: flex-start; }
-.story__photo { flex-shrink: 0; text-align: center; }
-.story__photo img {
-  width: 120px; height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--bg-alt);
+.case-cards {
+  display: grid;
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
 }
-.story--featured .story__photo img { border-color: rgba(196,149,106,.3); width: 140px; height: 140px; }
-.story__credit { font-size: 12px; color: var(--text-muted); margin-top: 10px; line-height: 1.6; }
 
-.story__text p { font-size: 15px; color: var(--text-mid); line-height: 2.1; margin-bottom: 12px; }
-.story__text p:last-child { margin-bottom: 0; }
-.story__text strong { color: var(--primary); font-weight: 600; }
-.story__text blockquote {
-  font-family: var(--font-display);
-  font-size: 17px; font-weight: 500;
-  color: var(--primary);
-  border-left: 3px solid var(--accent);
-  padding: 8px 0 8px 20px;
-  margin: 20px 0; line-height: 1.9;
+.case-card {
+  background: var(--white); /* 白背景 */
+  border-radius: var(--radius-sm);
+  padding: 48px 56px; /* 余白多め */
+  box-shadow: var(--shadow-sm); /* 上品で控えめなシャドウ */
+  border: 1px solid var(--line);
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
-.story__therapist { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
+
+.case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.case-card__item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.case-card__item--before {
+  padding-bottom: 24px;
+  border-bottom: 1px dashed var(--line);
+}
+
+.case-card__label {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  padding: 6px 16px;
+  border-radius: 4px;
+  min-width: 72px;
+}
+
+.case-card__item--before .case-card__label {
+  background: var(--bg-warm);
+  color: var(--text-mid);
+  border: 1px solid var(--line);
+}
+
+.case-card__item--after .case-card__label {
+  background: var(--accent-light);
+  color: var(--primary);
+  border: 1px solid #f1e4b3;
+}
+
+.case-card__text {
+  font-size: 16px;
+  color: var(--text-mid);
+  line-height: 1.8;
+  margin: 0;
+  padding-top: 4px;
+}
+
+.case-card__item--after .case-card__text {
+  color: var(--primary);
+  font-weight: 600;
+}
 
 
 /* ================================================================
@@ -1107,10 +1109,17 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   .hero__stat-value { font-size: 30px; }
   .hero__headline { font-size: 28px; }
 
-  .story { padding: 28px; }
-  .story--featured { padding: 32px; }
-  .story__body { flex-direction: column; }
-  .story__photo { align-self: center; }
+  .case-card {
+    padding: 32px;
+    gap: 20px;
+  }
+  .case-card__item {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .case-card__text {
+    padding-top: 0;
+  }
 
   .why__columns { grid-template-columns: 1fr; gap: 16px; }
   .why__multiply-mark { padding: 8px 0; font-size: 32px; }
@@ -1148,8 +1157,14 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   .hero__stat-card { padding: 12px 14px; min-width: 90px; }
   .hero__stat-value { font-size: 26px; }
   .hero__stats { gap: 8px; }
-  .story { padding: 20px; }
-  .story--featured { padding: 24px; }
-  .story__photo img { width: 100px; height: 100px; }
+
+  .case-card {
+    padding: 24px;
+    gap: 16px;
+  }
+  .case-card__item {
+    gap: 8px;
+  }
+
   .header__cta { padding: 8px 16px; font-size: 12px; }
 }
