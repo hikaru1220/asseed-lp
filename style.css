@@ -266,17 +266,21 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   gap: 16px;
   margin-top: 48px;
   margin-bottom: 32px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* PCでは改行させない */
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero__stat-card {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
   border-radius: var(--radius-sm);
-  padding: 24px 32px;
+  padding: 24px 20px;
   text-align: center;
   box-shadow: 0 4px 24px rgba(0,0,0,0.15);
   border: 1px solid rgba(255,255,255,0.3);
-  min-width: 140px;
+  flex: 1; /* 3つのカードを均等な幅にする */
+  min-width: 0; /* フレックスアイテムの縮小を許可 */
 }
 .hero__stat-card--main {
   background: rgba(255, 255, 255, 0.2);
