@@ -1056,11 +1056,11 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
 }
 .booking__line-title {
   font-family: var(--font-display);
-  font-size: 16px; color: rgba(255,255,255,.7);
+  font-size: 15px; color: #e2c275; /* ゴールド系の落ち着いた色 */
   margin-bottom: 20px;
 }
 .booking__line-sub {
-  font-size: 13px; color: rgba(255,255,255,.4);
+  font-size: 13px; color: rgba(255,255,255,.6);
   margin-top: 16px;
 }
 
