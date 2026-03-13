@@ -980,17 +980,23 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 }
 
 /* STEP画像 */
+.flow__step:first-child .flow__step-img img {
+  transform: scale(1.15);
+  transform-origin: 30% center; /* 渡辺様が写っている左寄りにフォーカス */
+}
 .flow__step-img {
   flex-shrink: 0;
   width: 150px;
   padding-top: 4px;
+  overflow: hidden; /* ズームした分がはみ出ないように */
+  border-radius: var(--radius-sm);
 }
 .flow__step-img img {
   width: 150px;
   height: 100px;
   object-fit: cover;
-  border-radius: var(--radius-sm);
   box-shadow: var(--shadow-sm);
+  transition: transform .4s ease;
 }
 
 
