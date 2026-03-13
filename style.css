@@ -1003,7 +1003,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 /* ================================================================
    FAQ
    ================================================================ */
-.faq { background: var(--bg-alt); }
+.faq { background: #F6F4F1; }
 details { border-bottom: 1px solid var(--line); }
 details:last-of-type { border-bottom: none; }
 details summary {
