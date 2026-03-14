@@ -1037,7 +1037,7 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   line-height: 1.3;
   letter-spacing: 0.15em;
   font-weight: 700;
-  margin-bottom: 32px;
+  margin-bottom: 56px; /* 32pxから大幅にアップして余裕を持たせる */
 }
 .pricing__subtitle {
   display: block;
