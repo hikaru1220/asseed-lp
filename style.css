@@ -1053,8 +1053,11 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
 .pricing__cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-bottom: 32px;
+  gap: 32px;
+  margin-bottom: 40px;
+  max-width: 1000px; /* カードの横幅を広げるために最大幅を大きく設定 */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .price-card {
@@ -1084,11 +1087,36 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   margin-bottom: 12px;
   align-self: flex-start;
 }
+.price-card__header {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.price-card__en {
+  font-family: 'Great Vibes', cursive;
+  font-size: 20px;
+  color: #ac6b25;
+  margin-bottom: 4px;
+  opacity: 0.7;
+  letter-spacing: 0.05em;
+  /* 透け感のあるキラッとしたデザイン */
+  background: linear-gradient(90deg, rgba(172,107,37,0.4) 0%, rgba(172,107,37,1) 50%, rgba(172,107,37,0.4) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(172,107,37,0.2);
+}
+.price-card--main .price-card__en {
+  color: #f1d2a9;
+  background: linear-gradient(90deg, rgba(241,210,169,0.4) 0%, rgba(241,210,169,1) 50%, rgba(241,210,169,0.4) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .price-card__label {
   font-family: var(--font-display);
-  font-size: 22px; font-weight: 700;
+  font-size: 24px; /* 22pxから2px大きく */
+  font-weight: 700;
   letter-spacing: .06em;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
 }
 .price-card--main .price-card__label { color: var(--white); }
 .price-card:not(.price-card--main) .price-card__label { color: var(--primary); }
@@ -1099,10 +1127,20 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
 .price-card--main .price-card__sub { color: rgba(255,255,255,.6); }
 .price-card__price {
   font-family: var(--font-display);
-  font-size: 40px; font-weight: 700;
-  margin-bottom: 4px;
+  font-size: 32px; /* 40pxから小さく調整 */
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap; /* 1行に収まるように調整 */
 }
-.price-card__price span { font-size: 15px; font-weight: 400; margin-left: 8px; opacity: .55; }
+.price-card__duration { 
+  font-size: 14px; 
+  font-weight: 400; 
+  margin-left: 8px; 
+  opacity: .55; 
+  white-space: nowrap; 
+}
 .price-card:not(.price-card--main) .price-card__price { color: var(--primary); }
 .price-card__includes {
   font-size: 13px; color: var(--text-light);
@@ -1117,7 +1155,27 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
 }
 .price-card--main .price-card__desc { color: rgba(255,255,255,.75); }
 .price-card--main .price-card__desc strong { color: var(--accent-light); }
+
 .price-card .btn { margin-top: auto; }
+
+/* プラン予約ボタンの色変更 */
+.btn--pricing-cta {
+  background: #ac6b25; /* LPのイメージに合わせたゴールド/ブラウン系 */
+  color: #fff;
+}
+.btn--pricing-cta:hover {
+  background: #8e581e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(172,107,37,0.3);
+}
+.price-card--main .btn--pricing-cta {
+  background: #fff;
+  color: var(--primary);
+}
+.price-card--main .btn--pricing-cta:hover {
+  background: #f8f8f8;
+  color: var(--primary);
+}
 
 .pricing__compare {
   background: var(--bg-warm);
