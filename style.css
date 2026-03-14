@@ -1030,6 +1030,23 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
    PRICING
    ================================================================ */
 .pricing { background: var(--white); }
+.pricing__title {
+  font-family: 'Cinzel', serif;
+  color: #ac6b25;
+  font-size: clamp(24px, 3.5vw, 36px);
+  line-height: 1.3;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+.pricing__subtitle {
+  display: block;
+  font-size: 16px; /* 17pxから1pxダウン */
+  font-weight: 400;
+  color: var(--text-mid);
+  margin-top: 12px;
+  letter-spacing: 0.05em;
+}
 
 .pricing__cards {
   display: grid;
