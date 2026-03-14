@@ -1113,6 +1113,10 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.price-card__en .price-card__time-small {
+  font-size: 12px; /* 14pxから2px縮小 */
+  margin-left: 0.2em;
+}
 .price-card__en-row {
   display: flex;
   justify-content: flex-start;
@@ -1126,6 +1130,10 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   font-weight: 700;
   letter-spacing: .06em;
   margin-bottom: 0px;
+}
+.price-card__label .price-card__time-small {
+  font-size: 22px; /* 24pxから2px縮小 */
+  margin-right: 0.2em;
 }
 .price-card--main .price-card__label { color: var(--white); }
 .price-card:not(.price-card--main) .price-card__label { color: var(--primary); }
