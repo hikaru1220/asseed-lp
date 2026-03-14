@@ -1103,18 +1103,31 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   /* 透け感のあるキラッとしたデザイン（微調整） */
   background: linear-gradient(90deg, rgba(172,107,37,0.4) 0%, rgba(172,107,37,1) 50%, rgba(172,107,37,0.4) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .price-card--main .price-card__en {
-  color: #f1d2a9;
-  background: linear-gradient(90deg, rgba(241,210,169,0.4) 0%, rgba(241,210,169,1) 50%, rgba(241,210,169,0.4) 100%);
+  color: #fce3c3; /* f1d2a9からより明るいベージュ系に変更 */
+  background: linear-gradient(90deg, rgba(252,227,195,0.4) 0%, rgba(252,227,195,1) 50%, rgba(252,227,195,0.4) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.price-card__title-row {
+.price-card__en-row {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+.price-card__duration-en {
+  font-family: 'Cinzel', serif;
+  font-size: 18px; /* 15pxから大きく調整 */
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #ac6b25; /* 英語表記と同じ基本色に変更 */
+}
+.price-card--main .price-card__duration-en {
+  color: #fce3c3; /* 英語表記と同じ明るいベージュに変更 */
 }
 .price-card__label {
   font-family: var(--font-display);
@@ -1122,38 +1135,6 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   font-weight: 700;
   letter-spacing: .06em;
   margin-bottom: 0px;
-}
-.price-card__time-info {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #ac6b25; /* 体験プラン用のデフォルト */
-}
-.price-card--main .price-card__time-info {
-  color: #f1d2a9; /* 実践プラン用 */
-}
-.price-card__clock {
-  position: relative;
-  width: 54px; /* サイズを拡大して文字を収める */
-  height: 54px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: -4px; /* ベルの部分があるため位置を調整 */
-}
-.price-card__clock svg {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-}
-.price-card__clock-text {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1;
-  position: relative;
-  z-index: 1;
-  transform: translateY(1.5px); /* 時計の中心（circleのcx, cy）に合わせる調整 */
 }
 .price-card--main .price-card__label { color: var(--white); }
 .price-card:not(.price-card--main) .price-card__label { color: var(--primary); }
