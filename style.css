@@ -1115,19 +1115,10 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
 }
 .price-card__en-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: baseline;
+  gap: 16px;
   margin-bottom: 4px;
-}
-.price-card__duration-en {
-  font-family: 'Cinzel', serif;
-  font-size: 18px; /* 15pxから大きく調整 */
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: #ac6b25; /* 英語表記と同じ基本色に変更 */
-}
-.price-card--main .price-card__duration-en {
-  color: #fce3c3; /* 英語表記と同じ明るいベージュに変更 */
 }
 .price-card__label {
   font-family: var(--font-display);
@@ -1145,7 +1136,7 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
 .price-card--main .price-card__sub { color: rgba(255,255,255,.6); }
 .price-card__price {
   font-family: var(--font-display);
-  font-size: 36px; /* 32pxから少し大きく */
+  font-size: 24px; /* 日本語プラン名と同じサイズに調整 */
   font-weight: 700;
   margin-bottom: 8px;
   display: flex;
@@ -1176,27 +1167,20 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
 
 .price-card .btn { margin-top: auto; }
 
-/* プラン予約ボタンの色変更 */
+/* プラン予約ボタンの色を統一（体験プランのカラーを採用） */
 .btn--pricing-cta {
-  background: #ac6b25; /* LPのイメージに合わせたゴールド/ブラウン系 */
+  background: #ac6b25; /* ゴールド/ブラウン系 */
   color: #fff;
-  white-space: nowrap; /* 1行に収める */
+  white-space: nowrap;
   padding-left: 10px;
   padding-right: 10px;
-  font-size: 15px; /* 必要に応じて少し調整 */
+  font-size: 15px;
 }
 .btn--pricing-cta:hover {
   background: #8e581e;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(172,107,37,0.3);
-}
-.price-card--main .btn--pricing-cta {
-  background: #fff;
-  color: var(--primary);
-}
-.price-card--main .btn--pricing-cta:hover {
-  background: #f8f8f8;
-  color: var(--primary);
+  color: #fff;
 }
 
 .pricing__compare {
