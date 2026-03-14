@@ -1114,7 +1114,7 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   -webkit-text-fill-color: transparent;
 }
 .price-card__en .price-card__time-small {
-  font-size: 12px; /* 14pxから2px縮小 */
+  font-size: 14px; /* Englishの時間はPLAN名と同じサイズに戻す */
   margin-left: 0.2em;
 }
 .price-card__en-row {
@@ -1132,7 +1132,7 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   margin-bottom: 0px;
 }
 .price-card__label .price-card__time-small {
-  font-size: 22px; /* 24pxから2px縮小 */
+  font-size: 21px; /* 22pxからさらに1px縮小 */
   margin-right: 0.2em;
 }
 .price-card--main .price-card__label { color: var(--white); }
@@ -1173,16 +1173,23 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
 .price-card--main .price-card__desc { color: rgba(255,255,255,.75); }
 .price-card--main .price-card__desc strong { color: var(--accent-light); }
 
-.price-card .btn { margin-top: auto; }
+.price-card .btn { display: none; } /* 個別ボタンは非表示 */
+
+.pricing__cta-wrapper {
+  text-align: center;
+  margin: 40px 0 60px;
+}
 
 /* プラン予約ボタンの色を統一（体験プランのカラーを採用） */
 .btn--pricing-cta {
   background: #ac6b25; /* ゴールド/ブラウン系 */
   color: #fff;
   white-space: nowrap;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 15px;
+  padding: 24px 20px;
+  font-size: 19px;
+  border-radius: 60px;
+  display: block;
+  width: 100%;
 }
 .btn--pricing-cta:hover {
   background: #8e581e;
@@ -1192,13 +1199,10 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
 }
 
 .pricing__compare {
-  background: var(--bg-warm);
-  border-radius: var(--radius-sm);
-  padding: 24px 28px;
+  padding: 10px 0 0;
   text-align: center;
-  border: 1px solid var(--line);
 }
-.pricing__compare p { font-size: 14px; color: var(--text-mid); line-height: 2; }
+.pricing__compare p { font-size: 12.5px; color: var(--text-mid); line-height: 2; white-space: nowrap; }
 .pricing__compare strong { color: var(--primary); font-weight: 600; }
 
 
