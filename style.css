@@ -1111,12 +1111,51 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.price-card__title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 .price-card__label {
   font-family: var(--font-display);
-  font-size: 24px; /* 22pxから2px大きく */
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: .06em;
   margin-bottom: 0px;
+}
+.price-card__time-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ac6b25; /* 体験プラン用のデフォルト */
+}
+.price-card--main .price-card__time-info {
+  color: #f1d2a9; /* 実践プラン用 */
+}
+.price-card__clock {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.price-card__clock svg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.price-card__clock-num {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+.price-card__time-text {
+  font-size: 15px;
+  font-weight: 600;
 }
 .price-card--main .price-card__label { color: var(--white); }
 .price-card:not(.price-card--main) .price-card__label { color: var(--primary); }
@@ -1127,25 +1166,21 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
 .price-card--main .price-card__sub { color: rgba(255,255,255,.6); }
 .price-card__price {
   font-family: var(--font-display);
-  font-size: 32px; /* 40pxから小さく調整 */
+  font-size: 36px; /* 32pxから少し大きく */
   font-weight: 700;
   margin-bottom: 8px;
   display: flex;
   align-items: baseline;
-  flex-wrap: wrap; /* 1行に収まるように調整 */
+  flex-wrap: wrap;
 }
-.price-card__duration { 
-  font-size: 16px; /* 14pxから拡大して目立たせる */
-  font-weight: 700; /* 太字に */
-  margin-left: 12px;
-  color: #ac6b25; /* 色を付けて目立たせる */
-  opacity: 1; /* 不透明度を上げる */
-  white-space: nowrap; 
-}
-.price-card--main .price-card__duration {
-  color: #f1d2a9; /* ダーク背景用の色 */
+.price-card__tax {
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 8px;
+  /* 金額と同じ色にする（親要素から継承） */
 }
 .price-card:not(.price-card--main) .price-card__price { color: var(--primary); }
+.price-card--main .price-card__price { color: var(--white); }
 .price-card__includes {
   font-size: 13px; color: var(--text-light);
   margin-bottom: 20px;
