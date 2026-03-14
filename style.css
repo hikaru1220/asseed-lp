@@ -56,6 +56,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 /* ========== LAYOUT ========== */
 .container { max-width: 1000px; margin: 0 auto; padding: 0 28px; }
 .container--narrow { max-width: 760px; }
+.container--wide { max-width: 1200px; }
 .section { padding: 140px 0; }
 
 /* ========== ANIMATION UTILITIES ========== */
@@ -1055,7 +1056,7 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   margin-bottom: 40px;
-  max-width: 1100px; /* カードの横幅をさらに広げる (1000px -> 1100px) */
+  max-width: 100%; /* container--wideに追従させる */
   margin-left: auto;
   margin-right: auto;
 }
@@ -1134,11 +1135,15 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   flex-wrap: wrap; /* 1行に収まるように調整 */
 }
 .price-card__duration { 
-  font-size: 14px; 
-  font-weight: 400; 
-  margin-left: 8px; 
-  opacity: .55; 
+  font-size: 16px; /* 14pxから拡大して目立たせる */
+  font-weight: 700; /* 太字に */
+  margin-left: 12px;
+  color: #ac6b25; /* 色を付けて目立たせる */
+  opacity: 1; /* 不透明度を上げる */
   white-space: nowrap; 
+}
+.price-card--main .price-card__duration {
+  color: #f1d2a9; /* ダーク背景用の色 */
 }
 .price-card:not(.price-card--main) .price-card__price { color: var(--primary); }
 .price-card__includes {
