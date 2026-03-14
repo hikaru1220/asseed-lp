@@ -1041,11 +1041,13 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
 }
 .pricing__subtitle {
   display: block;
-  font-size: 16px; /* 17pxから1pxダウン */
+  font-size: 16px;
   font-weight: 400;
   color: var(--text-mid);
   margin-top: 12px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.2em; /* 以前の1.025emから大幅に縮小し、読みやすさと上品さを両立 */
+  text-indent: 0.2em; /* 中央揃えを維持 */
+  text-align: center;
 }
 
 .pricing__cards {
