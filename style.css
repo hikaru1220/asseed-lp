@@ -1056,7 +1056,7 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   margin-bottom: 40px;
-  max-width: 100%; /* container--wideに追従させる */
+  max-width: 1040px; /* ボタンと合わせる */
   margin-left: auto;
   margin-right: auto;
 }
@@ -1064,18 +1064,22 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
 .price-card {
   background: var(--bg-warm);
   border-radius: var(--radius);
-  padding: 40px;
+  padding: 48px 40px;
   border: 1px solid var(--line);
   display: flex;
   flex-direction: column;
   position: relative;
+  transition: transform 0.4s var(--ease);
 }
+
 .price-card--main {
   background: var(--primary);
   color: var(--white);
   border-color: transparent;
   box-shadow: var(--shadow-lg);
+  transform: none; /* 念のため解除 */
 }
+
 .price-card__recommended-badge {
   position: absolute;
   top: -12px;
@@ -1091,136 +1095,158 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   letter-spacing: 0.1em;
   overflow: hidden;
 }
-.price-card__recommended-badge::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -60%;
-  width: 20%;
-  height: 200%;
-  background: rgba(255, 255, 255, 0.6);
-  transform: rotate(30deg);
-  animation: shine-badge 4s infinite;
-}
-@keyframes shine-badge {
-  0% { left: -60%; }
-  15% { left: 120%; }
-  100% { left: 120%; }
-}
-.price-card__badge {
-  display: inline-block;
-  background: var(--accent);
-  color: var(--white);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  padding: 4px 16px;
-  border-radius: 20px;
-  margin-bottom: 12px;
-  align-self: flex-start;
-}
+
 .price-card__header {
-  margin-bottom: 8px; /* 16pxから余白を短縮 */
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 32px;
 }
+
+.price-card__en-row {
+  margin-bottom: 12px;
+}
+
 .price-card__en {
-  font-family: 'Cinzel', serif; /* 筆記体からCinzelに変更 */
-  font-size: 14px; /* 筆記体よりサイズを控えめにしつつ質感を高める */
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
   color: #ac6b25;
-  margin-bottom: 4px;
-  opacity: 0.9;
   letter-spacing: 0.15em;
-  /* 透け感のあるキラッとしたデザイン（微調整） */
   background: linear-gradient(90deg, rgba(172,107,37,0.4) 0%, rgba(172,107,37,1) 50%, rgba(172,107,37,0.4) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .price-card--main .price-card__en {
-  color: #fce3c3; /* f1d2a9からより明るいベージュ系に変更 */
+  color: #fce3c3;
   background: linear-gradient(90deg, rgba(252,227,195,0.4) 0%, rgba(252,227,195,1) 50%, rgba(252,227,195,0.4) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.price-card__en .price-card__time-small {
-  font-size: 14px; /* Englishの時間はPLAN名と同じサイズに戻す */
-  margin-left: 0.2em;
-}
-.price-card__en-row {
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
-  gap: 16px;
-  margin-bottom: 4px;
-}
+
 .price-card__label {
   font-family: var(--font-display);
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
-  letter-spacing: .06em;
-  margin-bottom: 0px;
-}
-.price-card__label .price-card__time-small {
-  font-size: 21px; /* 22pxからさらに1px縮小 */
-  margin-right: 0.2em;
-}
-.price-card--main .price-card__label { color: var(--white); }
-.price-card:not(.price-card--main) .price-card__label { color: var(--primary); }
-.price-card__sub {
-  font-size: 14px; color: var(--text-light);
-  margin-bottom: 16px; line-height: 1.7;
-}
-.price-card--main .price-card__sub { color: rgba(255,255,255,.6); }
-.price-card__price {
-  font-family: var(--font-display);
-  font-size: 24px; /* 日本語プラン名と同じサイズに調整 */
-  font-weight: 700;
-  margin-bottom: 8px;
+  letter-spacing: .08em;
+  margin-bottom: 16px;
   display: flex;
   align-items: baseline;
-  flex-wrap: wrap;
+  gap: 12px;
 }
+
+.price-card__label {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.price-card__time-suffix {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.price-card--main .price-card__time-suffix {
+  color: rgba(255,255,255,0.7);
+}
+
+.price-card__recommended-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, #e7d1a2 0%, #d4b67a 100%);
+  color: #3e3324;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  border-bottom-left-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.price-card--main .price-card__target {
+  color: #93c5fd;
+  border-color: #93c5fd;
+}
+
+.price-card__sub {
+  font-size: 15px;
+  color: var(--text-mid);
+  font-weight: 600;
+}
+
+.price-card--main .price-card__sub {
+  color: rgba(255,255,255,0.8);
+}
+
+.price-card__body {
+  flex-grow: 1;
+}
+
+.price-card__includes {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 24px;
+}
+
+.price-card--main .price-card__includes {
+  color: rgba(255,255,255,0.4);
+}
+
+.price-card__desc {
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 2;
+}
+
+.price-card--main .price-card__desc {
+  color: rgba(255,255,255,0.75);
+}
+
+.price-card__footer {
+  margin-top: 48px;
+}
+
+.price-card__price {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: baseline;
+}
+
 .price-card__tax {
   font-size: 14px;
   font-weight: 500;
   margin-left: 8px;
-  /* 金額と同じ色にする（親要素から継承） */
 }
-.price-card:not(.price-card--main) .price-card__price { color: var(--primary); }
-.price-card--main .price-card__price { color: var(--white); }
-.price-card__includes {
-  font-size: 13px; color: var(--text-light);
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--line);
-}
-.price-card--main .price-card__includes { color: rgba(255,255,255,.4); border-bottom-color: rgba(255,255,255,.1); }
-.price-card__desc {
-  font-size: 14px; color: var(--text-mid);
-  line-height: 2; margin-bottom: 12px;
-}
-.price-card--main .price-card__desc { color: rgba(255,255,255,.75); }
-.price-card--main .price-card__desc strong { color: var(--accent-light); }
-
-.price-card .btn { display: none; } /* 個別ボタンは非表示 */
 
 .pricing__cta-wrapper {
   text-align: center;
-  margin: 40px 0 60px;
+  margin: 60px auto 40px;
+  max-width: 1040px; /* 100% width matching cards grid */
+  display: block;
 }
 
-/* プラン予約ボタンの色を統一（体験プランのカラーを採用） */
 .btn--pricing-cta {
-  background: #ac6b25; /* ゴールド/ブラウン系 */
+  background: #ac6b25;
   color: #fff;
   white-space: nowrap;
   padding: 24px 20px;
-  font-size: 19px;
+  font-size: 20px;
+  font-weight: 500;
   border-radius: 60px;
   display: block;
   width: 100%;
+  transition: all 0.3s ease;
+}
+.btn--pricing-cta:hover {
+  background: #8e581e;
+  transform: translateY(-2px);
 }
 .btn--pricing-cta:hover {
   background: #8e581e;
