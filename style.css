@@ -1147,6 +1147,22 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   gap: 12px;
 }
 
+.price-card__sub {
+  font-size: 15px;
+  color: var(--primary);
+  font-weight: 500;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #efe8e1; /* 薄いベージュ系の区切り線 */
+  display: inline-block;
+  width: 100%;
+}
+
+.price-card--main .price-card__sub {
+  color: #fff;
+  border-bottom-color: rgba(255,255,255,0.2); /* ダーク背景に合わせた薄い線 */
+}
+
 .price-card__time-suffix {
   font-size: 18px;
   font-weight: 500;
