@@ -1042,12 +1042,12 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
 }
 .pricing__subtitle {
   display: block;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 18px; /* 16pxから拡大 */
+  font-weight: 600; /* 通常から中太に */
   color: var(--text-mid);
-  margin-top: 12px;
-  letter-spacing: 0.2em; /* 以前の1.025emから大幅に縮小し、読みやすさと上品さを両立 */
-  text-indent: 0.2em; /* 中央揃えを維持 */
+  margin-top: 16px;
+  letter-spacing: 0.1em;
+  text-indent: 0.1em;
   text-align: center;
 }
 
