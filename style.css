@@ -829,19 +829,22 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .salon-space__hero img,
 .salon-space__hero video { width: 100%; height: 640px; object-fit: cover; object-position: center 70%; }
 .salon-space__text {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  text-align: center; padding: 100px 28px 40px;
-  background: linear-gradient(
-    to top,
-    rgba(255,255,255,1) 0%,
-    rgba(255,255,255,0.95) 20%,
-    rgba(255,255,255,0.7) 45%,
-    rgba(255,255,255,0.3) 70%,
-    rgba(255,255,255,0) 100%
-  );
+  position: absolute;
+  top: 50%; /* 中央に配置 */
+  left: 0; right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 40px 28px;
+  background: rgba(255, 255, 255, 0.4); /* 背景動画を活かしつつ文字を浮かせる */
+  backdrop-filter: blur(4px); /* ガラスのような質感で上品に */
+  -webkit-backdrop-filter: blur(4px);
   font-family: var(--font-display);
-  font-size: 22px; color: #2e2318;
-  letter-spacing: .08em; line-height: 2.2; font-weight: 700;
+  font-size: 24px;
+  color: #2e2318;
+  letter-spacing: .1em;
+  line-height: 2.2;
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(255,255,255,0.8); /* 文字の周りをほのかに光らせるエフェクト */
 }
 .salon-space__sub { display: grid; grid-template-columns: 1fr 1fr; }
 .salon-space__sub img { width: 100%; height: 240px; object-fit: cover; }
