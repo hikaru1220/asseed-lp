@@ -1159,15 +1159,42 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
 
 .price-card__recommended-badge {
   position: absolute;
-  top: 0;
-  right: 0;
-  background: linear-gradient(135deg, #e7d1a2 0%, #d4b67a 100%);
+  top: -12px;
+  right: -12px;
+  background: linear-gradient(135deg, #d4af37 0%, #f9f295 45%, #e6be8a 50%, #f9f295 55%, #d4af37 100%);
+  background-size: 200% auto;
   color: #3e3324;
-  padding: 8px 24px;
-  font-size: 14px;
+  padding: 10px 28px;
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
   font-weight: 700;
-  border-bottom-left-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2), 0 0 10px rgba(212,175,55,0.3);
+  z-index: 10;
+  animation: shimmer-gold 4s linear infinite;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+@keyframes shimmer-gold {
+  0% { transform: scale(1); background-position: 0% center; }
+  50% { transform: scale(1.02); background-position: 100% center; }
+  100% { transform: scale(1); background-position: 0% center; }
+}
+
+.price-card__recommended-badge::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, transparent 70%);
+  opacity: 0;
+  animation: sparkle-dots 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes sparkle-dots {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 0.8; transform: scale(1.2); }
 }
 
 .price-card--main .price-card__target {
