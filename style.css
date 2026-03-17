@@ -145,6 +145,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .btn--sm { padding: 10px 24px; font-size: 13px; }
 .btn--full { width: 100%; }
 .sp-only { display: none; }
+.u-nowrap { white-space: nowrap; }
+.u-inline-block { display: inline-block; }
 
 
 /* ================================================================
