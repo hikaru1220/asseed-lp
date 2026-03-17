@@ -37,7 +37,7 @@
 
 /* ========== RESET ========== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   font-family: var(--font-body);
   font-weight: 500;
@@ -47,6 +47,9 @@ body {
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
   letter-spacing: .03em;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -160,6 +163,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 }
 .header__inner {
   max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -1637,9 +1641,16 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
    RESPONSIVE
    ================================================================ */
 @media (max-width: 768px) {
+  .container, .container--narrow, .container--wide { max-width: 100%; }
   .section { padding: 72px 0; }
 
-  .hero { padding: 100px 20px 56px; min-height: auto; }
+  .header { padding: 10px 16px; }
+  .header__inner { width: 100%; max-width: none; }
+  .header__logo-img { height: 28px; }
+  .header__cta { font-size: 11px; padding: 10px 16px; margin-left: auto; }
+
+  .hero { padding: 100px 20px 56px; min-height: auto; width: 100%; }
+  .hero__inner { width: 100%; max-width: none; padding: 0 10px; }
   .hero__stats { gap: 16px 10px; display: inline-flex; flex-wrap: wrap; justify-content: center; margin: 40px auto 32px; max-width: 290px; }
   .hero__stat-card { padding: 12px 8px; flex: 1; min-width: 0; background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); }
   .hero__stat-card--main {
@@ -1672,6 +1683,9 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
 
   .why__title { margin-bottom: 48px; }
   .why__content p { margin-bottom: 32px; font-size: 15px; }
+
+  .empathy__cards { width: 100%; display: flex; flex-direction: column; align-items: stretch; gap: 12px; }
+  .empathy__card { width: 100%; max-width: none; text-align: left; }
 
   .why__columns { grid-template-columns: 1fr; gap: 16px; margin-top: 56px; }
   .why__col { padding: 32px 24px; }
