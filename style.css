@@ -517,7 +517,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .empathy__closing {
   text-align: center;
   font-family: var(--font-display);
-  font-size: 17px; color: var(--text);
+  font-size: 15px; color: var(--text);
   line-height: 2; font-weight: 500;
   max-width: 680px; margin: 0 auto;
 }
