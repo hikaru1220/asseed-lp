@@ -244,7 +244,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   text-shadow: 0 2px 10px rgba(0,0,0,0.7);
 }
 .hero__pre-headline .hero__pre-main {
-  font-size: clamp(20px, 3.2vw, 26px);
+  font-size: clamp(18px, 3vw, 26px);
   color: #fcebbb;
   font-weight: 800;
   letter-spacing: .12em;
@@ -1670,8 +1670,11 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   .hero__stat-value { font-size: 30px; text-shadow: 0 2px 6px rgba(0,0,0,0.5); }
   .hero__stat-value small { font-size: 16px; margin-left: 2px; } /* ラベル(13px)より大きく設定 */
   .hero__stat-label { font-size: 13px; text-shadow: 0 1px 4px rgba(0,0,0,0.4); margin-top: 4px; }
+  .hero__pre-headline .hero__pre-main {
+    font-size: 18px !important;
+  }
   .hero__headline { 
-    font-size: 22px !important; 
+    font-size: 26px !important; 
     white-space: nowrap !important; 
     padding: 0 16px; 
     word-break: keep-all;
@@ -1679,6 +1682,11 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   .hero__sub {
     font-size: 16px !important;
     line-height: 1.8;
+  }
+  .hero__sub--lead {
+    margin-bottom: 48px !important;
+  }
+  .hero__sub--main {
     margin-bottom: 32px;
   }
   br.sp-only { display: block; }
