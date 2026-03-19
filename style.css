@@ -1714,7 +1714,16 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   .why__content p { margin-bottom: 32px; font-size: 15px; }
 
   .empathy__cards { width: 100%; display: flex; flex-direction: column; align-items: stretch; gap: 12px; }
-  .empathy__card { width: 100%; max-width: none; text-align: left; }
+  .empathy__card { width: 100%; max-width: none; text-align: left; padding: 18px 16px; gap: 12px; }
+  .empathy__card p { font-size: 14px; white-space: nowrap; }
+  .empathy__closing {
+    font-size: 12.5px;
+    line-height: 2.2;
+    padding: 0 8px;
+  }
+  .empathy__closing .u-inline-block {
+    display: inline;
+  }
 
   .why__columns { grid-template-columns: 1fr; gap: 16px; margin-top: 56px; }
   .why__col { padding: 32px 24px; }
