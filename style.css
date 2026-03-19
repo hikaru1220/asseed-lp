@@ -1677,14 +1677,26 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   .hero__stat-value { font-size: 30px; text-shadow: 0 2px 6px rgba(0,0,0,0.5); }
   .hero__stat-value small { font-size: 16px; margin-left: 2px; } /* ラベル(13px)より大きく設定 */
   .hero__stat-label { font-size: 13px; text-shadow: 0 1px 4px rgba(0,0,0,0.4); margin-top: 4px; }
+  .hero__pre-headline {
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+  .hero__pre-headline br.sp-only {
+    display: none;
+  }
   .hero__headline { 
-    font-size: clamp(20px, 6vw, 28px) !important; 
+    font-size: clamp(20px, 6.2vw, 28px) !important; 
     white-space: nowrap !important; 
     text-align: center;
     width: 100%;
     padding: 0;
     letter-spacing: .02em;
     word-break: keep-all;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-shadow:
+      0 2px 12px rgba(0,0,0,0.6),
+      0 0 40px rgba(255,255,255,0.15);
   }
   .hero__sub {
     font-size: 16px !important;
