@@ -1678,11 +1678,12 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   .hero__stat-value small { font-size: 16px; margin-left: 2px; } /* ラベル(13px)より大きく設定 */
   .hero__stat-label { font-size: 13px; text-shadow: 0 1px 4px rgba(0,0,0,0.4); margin-top: 4px; }
   .hero__headline { 
-    font-size: clamp(22px, 7vw, 28px) !important; 
+    font-size: clamp(20px, 6vw, 28px) !important; 
     white-space: nowrap !important; 
     text-align: center;
     width: 100%;
-    padding: 0 16px;
+    padding: 0;
+    letter-spacing: .02em;
     word-break: keep-all;
   }
   .hero__sub {
