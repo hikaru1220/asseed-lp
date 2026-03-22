@@ -238,9 +238,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .hero__pre-headline {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 56px;
   font-family: var(--font-display);
-  margin-bottom: 24px;
+  margin-bottom: 56px;
   text-shadow: 0 2px 10px rgba(0,0,0,0.7);
 }
 .hero__pre-headline .hero__pre-main {
@@ -258,7 +258,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .hero__headline {
   font-size: clamp(28px, 4.5vw, 48px);
   color: #fff;
-  margin-bottom: 32px;
+  margin-bottom: 48px;
   line-height: 1.4;
   font-weight: 900;
   letter-spacing: .05em;
