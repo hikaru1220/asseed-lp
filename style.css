@@ -1717,9 +1717,12 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
   .empathy__card { width: 100%; max-width: none; text-align: left; padding: 18px 16px; gap: 12px; }
   .empathy__card p { font-size: 14px; white-space: nowrap; }
   .empathy__closing {
-    font-size: 12.5px;
-    line-height: 2.2;
-    padding: 0 8px;
+    font-size: clamp(11px, 3.4vw, 14px);
+    line-height: 2.6;
+    letter-spacing: -0.02em;
+    padding: 0;
+    margin-left: -16px;
+    margin-right: -16px;
   }
   .empathy__closing .u-inline-block {
     display: inline;
