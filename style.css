@@ -144,9 +144,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .btn--large { padding: 24px 56px; font-size: 19px; letter-spacing: .06em; }
 .btn--sm { padding: 10px 24px; font-size: 13px; }
 .btn--full { width: 100%; }
-.sp-only { display: none; }
+.sp-only { display: none !important; }
+.pc-only { display: block; }
 .u-nowrap { white-space: nowrap; }
-.u-inline-block { display: inline-block; }
 
 
 /* ================================================================
@@ -1762,7 +1762,8 @@ details p { padding: 0 0 24px; font-size: 15px; color: var(--text-mid); line-hei
 
   .booking__form { padding: 24px; }
 
-  .sp-only { display: inline; }
+  .sp-only { display: block !important; }
+  .pc-only { display: none !important; }
   .fixed-cta { padding: 10px 16px; }
 }
 
