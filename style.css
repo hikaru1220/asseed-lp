@@ -258,6 +258,7 @@ h3 {
   right: 0;
   z-index: 200;
   background: rgba(248, 245, 240, .92);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
   padding: 12px 24px;
@@ -333,6 +334,7 @@ h3 {
   padding: 10px 32px;
   margin-bottom: 32px;
   background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
 
@@ -402,6 +404,7 @@ h3 {
 
 .hero__stat-card {
   background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border-radius: var(--radius-sm);
   padding: 24px 32px;
@@ -468,6 +471,30 @@ h3 {
 
 .hero__cta-wrapper {
   margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__online-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(220, 174, 85, 0.5);
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 40px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  margin-bottom: 16px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.hero__online-badge svg {
+  color: var(--accent);
 }
 
 .hero__cta-text {
@@ -518,6 +545,7 @@ h3 {
 }
 
 .stories__title {
+  font-family: 'Shippori Mincho', serif;
   font-size: clamp(22px, 3vw, 34px);
   text-align: center;
   color: var(--primary);
@@ -681,7 +709,8 @@ h3 {
 }
 
 .empathy__title {
-  font-size: clamp(22px, 3vw, 32px);
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(22px, 4vw, 32px);
   text-align: center;
   color: var(--primary);
   margin-bottom: 56px;
@@ -939,12 +968,30 @@ h3 {
   color: var(--primary);
 }
 
+.why__result-highlight-wrapper {
+  margin-top: 64px;
+  padding-top: 48px;
+  position: relative;
+}
+
+.why__result-highlight-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
 .why__result-highlight {
   display: block;
-  font-size: clamp(30px, 4.5vw, 38px);
-  font-weight: 800;
-  margin-top: 56px;
-  margin-bottom: 12px;
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(30px, 5vw, 40px);
+  font-weight: 600;
+  letter-spacing: .12em;
+  line-height: 1.8;
   background: linear-gradient(135deg,
       #cfa153 0%,
       #eee0ab 30%,
@@ -958,6 +1005,12 @@ h3 {
   animation: goldShine 3.5s linear infinite;
 }
 
+.why__result-prefix {
+  font-size: 0.65em;
+  font-weight: 500;
+  letter-spacing: .18em;
+}
+
 @keyframes goldShine {
   to {
     background-position: 200% center;
@@ -969,6 +1022,7 @@ h3 {
    SECTION COMMON
    ================================================================ */
 .section__title {
+  font-family: 'Shippori Mincho', serif;
   font-size: clamp(22px, 3vw, 32px);
   text-align: center;
   color: var(--primary);
@@ -992,16 +1046,23 @@ h3 {
 }
 
 .therapists__title {
-  margin-bottom: 48px;
-  /* 約1行分のスペース */
+  margin-bottom: 24px;
   line-height: 1.6;
+}
+
+.therapists__stat {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: .15em;
+  margin-bottom: 12px;
 }
 
 .therapists__lead {
   font-size: 16px;
-  /* 文字サイズを1pxアップ */
   line-height: 2.4;
-  /* 全体の行間を広げて余白を持たせる */
   margin-bottom: 72px;
 }
 
@@ -1183,9 +1244,9 @@ h3 {
   padding: 40px 28px;
   background: rgba(255, 255, 255, 0.4);
   /* 背景動画を活かしつつ文字を浮かせる */
-  backdrop-filter: blur(4px);
   /* ガラスのような質感で上品に */
   -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   font-family: var(--font-display);
   font-size: 24px;
   color: #2e2318;
@@ -1749,42 +1810,49 @@ details p {
 }
 
 .final-push__title {
-  font-size: clamp(22px, 3vw, 32px);
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(20px, 3.5vw, 32px);
   text-align: center;
   color: var(--primary);
   margin-bottom: 40px;
 }
 
 .final-push__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0 auto 48px;
+  max-width: 560px;
 }
 
 .final-push__item {
   display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  background: var(--white);
-  border-radius: var(--radius-sm);
-  padding: 20px;
-  border: 1px solid var(--line);
+  gap: 16px;
+  align-items: center;
+  background: transparent;
+  padding: 16px 8px;
+  border-bottom: 1px dashed rgba(220, 174, 85, 0.4);
+}
+
+.final-push__item:last-child {
+  border-bottom: none;
 }
 
 .final-push__check {
   flex-shrink: 0;
-  color: var(--coral);
-  font-size: 18px;
-  font-weight: 700;
-  margin-top: 2px;
+  color: var(--accent);
+  margin-top: 0;
+  width: 22px;
+  height: 22px;
 }
 
 .final-push__item p {
+  font-family: var(--font-base);
   font-size: 16px;
   color: var(--text);
-  line-height: 1.7;
+  line-height: 1.6;
   font-weight: 500;
+  letter-spacing: .02em;
 }
 
 .final-push__message {
@@ -1826,21 +1894,32 @@ details p {
 .booking {
   background: var(--bg-warm);
   color: var(--text);
+  text-align: center;
 }
 
 .booking__title {
   font-size: clamp(24px, 3.5vw, 36px);
-  text-align: center;
   color: var(--primary);
   margin-bottom: 24px;
+  border-bottom: 3px solid var(--accent);
+  display: inline-block;
+  padding-bottom: 8px;
 }
 
 .booking__lead {
   text-align: center;
-  font-size: 16px;
+  font-size: 15px;
   color: var(--text-mid);
-  margin-bottom: 56px;
-  line-height: 2;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.booking__assurance {
+  display: block;
+  font-size: 13px;
+  color: var(--accent);
+  margin-top: 12px;
+  font-weight: 500;
 }
 
 .booking__form {
@@ -1973,25 +2052,57 @@ details p {
   overflow: hidden;
 }
 
-.access__name {
-  text-align: center;
-  font-family: var(--font-display);
-  font-size: 18px;
+.access__title {
+  margin-bottom: 32px;
+  font-family: 'Cinzel', serif;
+  color: #ac6b25;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+}
+
+.access__subtitle {
+  display: block;
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(18px, 4vw, 22px);
   font-weight: 600;
   color: var(--primary);
-  margin-bottom: 32px;
+  margin-top: 12px;
+  letter-spacing: .08em;
 }
 
 .access__info {
-  text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.access__info-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.access__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.access__row:last-child {
+  margin-bottom: 0;
+}
+
+.access__icon {
+  flex-shrink: 0;
+  color: var(--accent);
+  margin-top: 3px;
 }
 
 .access__address {
-  font-size: 16px;
+  font-size: 15px;
   color: var(--text);
-  line-height: 2;
-  margin-bottom: 12px;
+  line-height: 1.9;
 }
 
 .access__station {
@@ -2002,6 +2113,30 @@ details p {
 
 .access__station strong {
   color: var(--primary);
+}
+
+.access__online-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--white);
+  border: 1px solid rgba(220, 174, 85, 0.25);
+  border-radius: var(--radius-sm);
+  padding: 16px 24px;
+  margin-bottom: 32px;
+}
+
+.access__online-note svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.access__online-note p {
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.8;
+  margin: 0;
 }
 
 .access__directions,
@@ -2036,6 +2171,34 @@ details p {
 
 .access__parking a:hover {
   color: var(--primary);
+}
+
+.access__mini-cta {
+  text-align: center;
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+
+.access__mini-cta > p {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--text-mid);
+  margin-bottom: 24px;
+  line-height: 1.8;
+}
+
+.access__mini-cta-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.access__mini-cta-buttons .btn {
+  padding: 12px 28px;
+  font-size: 14px;
+  border-radius: 40px;
 }
 
 
@@ -2143,14 +2306,15 @@ details p {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 12px 16px 16px;
+  padding: 12px 16px;
   background: rgba(248, 245, 240, .96);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border-top: 1px solid var(--line);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
   z-index: 100;
   transform: translateY(100%);
   transition: transform .4s var(--ease);
-  text-align: center;
 }
 
 .fixed-cta.visible {
@@ -2158,39 +2322,35 @@ details p {
 }
 
 .fixed-cta__inner {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: stretch;
+  max-width: 600px;
   margin: 0 auto;
-  text-align: center;
 }
 
-.fixed-cta__text-top {
-  font-size: 11px;
-  color: #8c8072;
-  /* 控えめなブラウン・グレー系 */
-  margin-bottom: 6px;
-  font-weight: 500;
-}
-
-.fixed-cta__text-bottom {
-  font-size: 10px;
-  color: #a4998c;
-  /* さらに控えめな色 */
-  margin-top: 6px;
+.fixed-cta__buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
 
 .fixed-cta .btn {
-  width: 100%;
-  /* 親要素(上のテキストの幅)に自動でピッタリ揃う */
-  max-width: none;
-  padding: 14px 0;
-  font-size: 15px;
+  padding: 10px 0;
+  font-size: 14px;
   font-weight: 700;
-  border-radius: 40px;
+  border-radius: 8px;
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  line-height: 1.4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.fixed-cta__btn-reserve {
+  flex: 1.2;
+}
+
+.fixed-cta__btn-line {
+  flex: 1;
 }
 
 
@@ -2245,7 +2405,7 @@ details p {
 
   .hero {
     padding: 100px 20px 56px;
-    min-height: auto;
+    min-height: 0;
     width: 100%;
   }
 
@@ -2411,6 +2571,14 @@ details p {
     padding: 32px 24px;
   }
 
+  .why__col h3 {
+    font-size: clamp(15px, 4.2vw, 20px);
+    letter-spacing: 0.02em;
+    margin: -16px -24px 32px -24px;
+    padding: 14px 16px;
+    white-space: nowrap;
+  }
+
   .why__multiply-mark {
     padding: 8px 0;
     font-size: 32px;
@@ -2430,8 +2598,17 @@ details p {
     font-size: 20px;
   }
 
-  .why__result-highlight {
-    margin-top: 16px;
+  .why__result-highlight-wrapper {
+    margin-top: 40px;
+    padding-top: 36px;
+  }
+
+  .why__result-highlight-wrapper::before {
+    width: 40px;
+  }
+
+  .therapists__lead {
+    font-size: 15px;
   }
 
   .therapist {
@@ -2452,6 +2629,12 @@ details p {
   .therapist__photo img {
     width: 100px;
     height: 120px;
+  }
+
+  .salon-space__text {
+    font-size: 18px;
+    letter-spacing: .06em;
+    padding: 32px 20px;
   }
 
   .salon-space__hero img {
@@ -2506,9 +2689,7 @@ details p {
     height: 200px;
   }
 
-  .final-push__grid {
-    grid-template-columns: 1fr;
-  }
+
 
   .pricing__cards,
   .pricing__cards--three {
