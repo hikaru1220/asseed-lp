@@ -480,17 +480,15 @@ h3 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(220, 174, 85, 0.5);
+  background: none;
+  border: none;
   color: #fff;
-  padding: 6px 16px;
-  border-radius: 40px;
-  font-size: 13px;
+  padding: 6px 0;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: .05em;
   margin-bottom: 16px;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero__online-badge svg {
@@ -765,6 +763,11 @@ h3 {
   font-weight: 500;
   max-width: 680px;
   margin: 0 auto;
+  padding: 40px 32px;
+  background: linear-gradient(135deg, rgba(220, 174, 85, 0.06) 0%, rgba(255, 255, 255, 0.6) 100%);
+  border-radius: 16px;
+  border-top: 2px solid rgba(220, 174, 85, 0.3);
+  position: relative;
 }
 
 .empathy__closing p {
@@ -1767,23 +1770,45 @@ details p {
   display: block;
 }
 .btn--pricing-cta {
-  background: #ac6b25;
-  color: #fff;
+  background: #fdf5d3;
+  color: #3d352c;
   white-space: nowrap;
-  padding: 22px 20px;
-  font-size: 20px;
-  font-weight: 600;
+  padding: 28px 24px;
+  font-size: 21px;
+  font-weight: 800;
   border-radius: 60px;
   display: block;
   width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
   transition: all 0.3s ease;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 0 24px rgba(253, 245, 211, 0.4);
+  border: 1px solid #f1e4b3;
+  position: relative;
+  overflow: hidden;
 }
+
+.btn--pricing-cta::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-25deg);
+  animation: shimmer 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
 .btn--pricing-cta:hover {
-  background: #8e581e;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(172,107,37,0.3);
-  color: #fff;
+  background: #fff;
+  color: #2a1f1a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12), 0 0 32px rgba(253, 245, 211, 0.6);
 }
 
 /* --- 比較テキスト --- */
@@ -1859,6 +1884,8 @@ details p {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
+  padding-top: 64px;
+  border-top: 1px solid var(--line);
 }
 
 .final-push__bold {
@@ -1886,6 +1913,12 @@ details p {
   margin-top: 32px;
   font-weight: 700;
 }
+
+.final-push__question--hero {
+  margin-bottom: 40px;
+}
+
+
 
 
 /* ================================================================
@@ -2549,12 +2582,12 @@ details p {
   }
 
   .empathy__closing {
-    font-size: clamp(11px, 3.4vw, 14px);
+    font-size: clamp(15px, 4vw, 17px);
     line-height: 2.6;
-    letter-spacing: -0.02em;
-    padding: 0;
-    margin-left: -16px;
-    margin-right: -16px;
+    letter-spacing: .02em;
+    padding: 32px 20px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .empathy__closing .u-inline-block {
