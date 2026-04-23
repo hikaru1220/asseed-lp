@@ -1113,7 +1113,7 @@ h3 {
 
 /* 各セラピストの顔のサイズ感を遠藤さんに揃える微調整 */
 img[src*="therapist-fujiwara"] {
-  transform: scale(1.15) translateY(4%);
+  transform: scale(1.2) translateY(-6%);
 }
 
 img[src*="therapist-narita"] {
