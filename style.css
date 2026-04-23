@@ -1098,6 +1098,8 @@ h3 {
 
 .therapist__photo {
   flex-shrink: 0;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
 }
 
 .therapist__photo img {
@@ -1105,6 +1107,17 @@ h3 {
   height: 150px;
   object-fit: cover;
   border-radius: var(--radius-sm);
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* 各セラピストの顔のサイズ感を遠藤さんに揃える微調整 */
+img[src*="therapist-fujiwara"] {
+  transform: scale(1.15) translateY(4%);
+}
+
+img[src*="therapist-narita"] {
+  transform: scale(1.18) translateY(2%);
 }
 
 .therapist__info h3 {
