@@ -2778,6 +2778,16 @@ details p {
     height: 120px;
   }
 
+  .therapist__field {
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+
+  .therapist__field span {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
   .salon-space__text {
     font-size: 18px;
     letter-spacing: .06em;
