@@ -2546,6 +2546,10 @@ details p {
     width: 100%;
   }
 
+  .hero__bg {
+    object-position: 70% center;
+  }
+
   .hero__inner {
     width: 100%;
     max-width: none;
