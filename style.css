@@ -718,9 +718,9 @@ h3 {
 
 .stories__closing p {
   font-family: 'Shippori Mincho', serif;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--primary);
-  line-height: 2.4;
+  line-height: 2.2;
   letter-spacing: 0.08em;
   margin-bottom: 32px;
 }
@@ -2682,7 +2682,8 @@ details p {
   }
 
   .stories__closing p {
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 2.2;
   }
 
   .why__title {
